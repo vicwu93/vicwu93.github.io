@@ -18,7 +18,7 @@
             let name = document.getElementById("name").value;
             // console.log(name)
             // let str = "john"
-            xhttp.open("GET", "http://localhost:3000/?name=" + name, true);
+            xhttp.open("GET", "https://tranquil-savannah-08194.herokuapp.com/?name=" + name, true);
             xhttp.send();
             xhttp.onreadystatechange = function () {
                 if (this.readyState == 4 && this.status == 200) {
