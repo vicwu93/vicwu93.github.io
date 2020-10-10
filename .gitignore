@@ -21,3 +21,16 @@
 Network Trash Folder
 Temporary Items
 .apdisk
+
+# Compressed files
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+#VS Code
+.vscode/

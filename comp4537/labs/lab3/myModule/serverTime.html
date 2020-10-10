@@ -1,0 +1,32 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 3</title>
+</head>
+<body>
+    <div id="msg">
+        <input type="text" id="name" placeholder="Enter Your Name" />
+        <button type="button" onclick="func();">Enter</button>
+    </div>
+    <div id="msgReply">
+
+    </div>
+    <script>
+        function func() {
+            let xhttp = new XMLHttpRequest();
+            let name = document.getElementById("name").value;
+            console.log(name)
+            // let str = "john"
+            xhttp.open("GET", "http://localhost:8888/?name=" + name, true);
+            xhttp.send();
+            xhttp.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+                    document.getElementById("msgReply").innerHTML = 
+                        this.responseText;
+                }
+            };
+        }
+    </script>
+</body>
+</html>
