@@ -8,6 +8,7 @@ async function topFive() {
     .then((res) => res.json())
     .then((data) => {
     });
+    console.log(res)
     let topfive = document.getElementById("#topfive")
     let rank = 1
     for(let i = 0; i < 5; i++) {
