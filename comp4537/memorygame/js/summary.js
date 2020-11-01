@@ -9,7 +9,7 @@ function submit() {
     let url = `https://memgame-server.herokuapp.com/insert_score?name=${name}&${score}`
     let res = fetch(url)
     .then((res) => res.json())
-    .then((data) => {data.score
+    .then((data) => {
     });
     location.href="./leaderboard.html"
     return res.json()
