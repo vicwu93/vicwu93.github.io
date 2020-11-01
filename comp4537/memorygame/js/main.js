@@ -5,7 +5,7 @@
 
 let score = 0 
 let numRight = 0 
-let attempts = 0
+let attempts = 0 
 
 // Game settings
 let maxrc = 7
@@ -42,14 +42,14 @@ function rotate() {
 
 function terminate() {
     if(confirm("Terminating this session..."))
-        location.href="./summary.html"
+        location.href=`./summary.html?score=${score}`
     else
         return false
 }
 
 function gameover() {
     alert("game over")
-    location.href="./summary.html"
+    location.href=`./summary.html?score=${score}`
 }
 
 
@@ -78,13 +78,20 @@ async function cardClicked(e) {
 
     // If clicked card is not in randgen # array
     } else {
-        score--
-        attempts++
-        e.target.style.backgroundColor = "#000000"
+        if(score == 0){
+            attempts++
+            e.target.style.backgroundColor = "#000000"
+        } else {
+            score--
+            attempts++
+            e.target.style.backgroundColor = "#000000"
+        }
     }
 
     // Check if # of attempted clicks equates to # of front facing cards
     if(checkNumClicked() == true) {
+        // Append score onto body
+        document.querySelector("#score").innerHTML = "Score: " + score
         // console.log(grid.cards)
         let rma = document.querySelectorAll(".card")
         rma.forEach(card => card.removeAttribute("onclick"))
