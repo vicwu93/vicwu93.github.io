@@ -7,15 +7,16 @@ function topFive() {
     let res = fetch(url)
     .then((res) => res.json())
     .then((data) => {
-    let topfive = document.getElementById("topfive")
-    let rank = 1
-    for(let i = 0; i < 5; i++) {
-        let ranks = document.createElement("div")
-        ranks.className = "ranks"
-        ranks.innerHTML += `<div>${rank} ${data.name} ${data.score}`
-        rank++
-        topfive.appendChild(ranks)
-    }
+        console.log(data)
+        let topfive = document.getElementById("topfive")
+        let rank = 1
+        for(let i = 0; i < 5; i++) {
+            let ranks = document.createElement("div")
+            ranks.className = "ranks"
+            ranks.innerHTML += `<div>${rank} ${data.name} ${data.score}`
+            rank++
+            topfive.appendChild(ranks)
+        }
     });
 }
 
