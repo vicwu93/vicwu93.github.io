@@ -31,6 +31,7 @@ Temporary Items
 *.rar
 *.tar
 *.zip
+*.out
 
 #VS Code
 .vscode/
