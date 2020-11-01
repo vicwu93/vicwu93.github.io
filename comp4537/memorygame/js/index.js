@@ -15,15 +15,15 @@ let cols = 3
 let numFrontCards = 3
 
 let grid = new Grid(rows, cols, numFrontCards)
-
+let audio = new Audio("./megaman.mp3")
 async function init() {
+    audio.play()
     grid = new Grid(rows, cols, numFrontCards)
     numRight = 0
     attempts = 0
     grid.makeGrid()
     grid.makeFrontCards()
     await sleep(1000)
-
     // Show front cards
     grid.showFrontCards()
     await sleep(1500)
