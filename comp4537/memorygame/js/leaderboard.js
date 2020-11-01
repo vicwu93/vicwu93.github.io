@@ -2,6 +2,17 @@ function restart() {
     location.href = "./main.html"
 }
 
+window.onload = () => {
+    let urlParams = new URLSearchParams(window.location.search)
+    let score = urlParams.get("score")
+    let name = urlParams.get("name")
+    let rank = urlParams.get("rank")
+    if(score == undefined || name == undefined || rank == undefined) 
+        return restart()
+    document.getElementById("user").innerHTML = `name: ${name} score: ${score} rank: ${rank}`
+    topFive()
+} 
+
 function topFive() {
     let url = `https://memgame-server.herokuapp.com/top_five`
     let res = fetch(url)
@@ -19,5 +30,3 @@ function topFive() {
         }
     });
 }
-
-topFive()
