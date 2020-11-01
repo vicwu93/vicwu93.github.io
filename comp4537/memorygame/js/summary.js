@@ -11,6 +11,7 @@ async function submit() {
     .then((res) => res.json())
     .then((data) => {
     });
+    location.href="./leaderboard.html"
     return res.json()
 }
 

@@ -52,7 +52,6 @@ function gameover() {
     location.href=`./summary.html?score=${score}`
 }
 
-
 // Sleeps the function being called from
 function sleep(ms) {
     return new Promise(res => setTimeout(res, ms));
