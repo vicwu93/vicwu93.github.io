@@ -13,7 +13,7 @@ function topFive() {
         for(let i = 0; i < 5; i++) {
             let ranks = document.createElement("div")
             ranks.className = "ranks"
-            ranks.innerHTML += `<div>${rank} ${data.name} ${data.score}`
+            ranks.innerHTML += `<div>${rank} ${data[i].name} ${data[i].score}`
             rank++
             topfive.appendChild(ranks)
         }
