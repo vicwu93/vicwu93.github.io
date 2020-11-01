@@ -12,6 +12,5 @@ function submit() {
     .then((data) => {
     });
     location.href="./leaderboard.html"
-    return res.json()
 }
 
