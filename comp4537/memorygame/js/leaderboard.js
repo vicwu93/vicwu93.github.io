@@ -14,9 +14,9 @@ window.onload = () => {
     topFive()
 } 
 
-async function topFive() {
+function topFive() {
     let url = `https://memgame-server.herokuapp.com/top_five`
-    let res = fetch(url)
+    fetch(url)
     .then((res) => res.json())
     .then((data) => {
         // console.log(data)
