@@ -59,7 +59,8 @@ class Grid {
             // keep all cards != to randgen front cards
             this.cards = this.cards.filter(card => card != this.frontCardsArr[i])
         }
-        console.log("ans: ", this.frontCardsArr)
+        // console logs the answer
+        // console.log("ans: ", this.frontCardsArr)
     }
 
     // show and hide the front cards

@@ -7,9 +7,10 @@ window.onload = () => {
     let score = urlParams.get("score")
     let name = urlParams.get("name")
     let rank = urlParams.get("rank")
+    console.log(parseInt(rank)+1)
     if(score == undefined || name == undefined || rank == undefined) 
         return restart()
-    document.getElementById("user").innerHTML = `name: ${name} score: ${score} rank: ${rank}`
+    document.getElementById("user").innerHTML = `Name: ${name} Score: ${score} Rank: ${parseInt(rank)+1}`
     topFive()
 } 
 
@@ -19,11 +20,11 @@ function topFive() {
     .then((res) => res.json())
     .then((data) => {
         // console.log(data)
-        let topfive = document.getElementById("topfive")
+        let topfive = document.getElementById("Topfive")
         let rank = 1
         for(let i = 0; i < 5; i++) {
             let ranks = document.createElement("div")
-            ranks.className = "ranks"
+            ranks.className = "Ranks"
             ranks.innerHTML += `<div>${rank} ${data[i].name} ${data[i].score}`
             rank++
             topfive.appendChild(ranks)
