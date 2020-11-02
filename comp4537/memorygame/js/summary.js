@@ -14,5 +14,4 @@ function submit() {
     .then((data) => {
         location.href=`./leaderboard.html?name=${data.name}&score=${data.score}&rank=${data.rank}`
     })
-
 }
