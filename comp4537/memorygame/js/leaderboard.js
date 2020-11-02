@@ -7,7 +7,7 @@ window.onload = () => {
     let score = urlParams.get("score")
     let name = urlParams.get("name")
     let rank = urlParams.get("rank")
-    console.log(parseInt(rank)+1)
+
     if(score == undefined || name == undefined || rank == undefined) 
         return restart()
     document.getElementById("user").innerHTML = `Name: ${name} Score: ${score} Rank: ${parseInt(rank)+1}`
