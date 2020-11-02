@@ -9,7 +9,6 @@ function submit() {
     let url = `https://memgame-server.herokuapp.com/insert_score?name=${name}&score=${score}`
     // let res = await (await fetch(url, {mode: "cors"})).json()
     // res = await res.json()
-    // console.log(res)
     let res = fetch(url)
     .then((res) => res.json())
     .then((data) => {
