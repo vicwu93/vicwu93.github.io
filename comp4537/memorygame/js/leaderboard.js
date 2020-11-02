@@ -18,7 +18,7 @@ function topFive() {
     let res = fetch(url)
     .then((res) => res.json())
     .then((data) => {
-        console.log(data)
+        // console.log(data)
         let topfive = document.getElementById("topfive")
         let rank = 1
         for(let i = 0; i < 5; i++) {

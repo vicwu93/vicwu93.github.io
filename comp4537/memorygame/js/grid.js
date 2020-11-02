@@ -31,18 +31,14 @@ class Grid {
         return card 
     }
 
+    // creates the grid by x and y axis
     makeGrid(){ 
         this.grid.innerHTML = ""
-        // let tmp = 0
         for(let i = 0; i < this.rows; i++) {
             let row = this.makeRow()
             for(let j = 0; j < this.cols; j++) {
                 let card = this.makeCard(i, j)
-                // this.leftOverCards[tmp] = card
-                // tmp++
-                // card.setAttribute("onclick", "onCard")
                 row.appendChild(card)
-                // card.setAttribute("onclick", "cardClicked(event)")
             }
             this.grid.appendChild(row)
         }
