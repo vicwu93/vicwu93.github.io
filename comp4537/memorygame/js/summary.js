@@ -2,7 +2,7 @@ function restart() {
     location.href = "./index.html"
 }
 
-function submit() {
+async function submit() {
     let name = document.getElementById("name").value
     let urlParams = new URLSearchParams(window.location.search)
     let score = urlParams.get("score")
