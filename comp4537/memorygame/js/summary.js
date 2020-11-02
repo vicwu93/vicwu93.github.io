@@ -12,7 +12,8 @@ async function submit() {
     // console.log(res)
     let res = fetch(url)
     .then((res) => res.json())
-    .then((data) => {})
+    .then((data) => {
+        location.href=`./leaderboard.html?name=${data.name}&score=${data.score}&rank=${data.rank}`
+    })
 
-    location.href=`./leaderboard.html?name=${res.name}&score=${res.score}&rank=${res.rank}`
 }
