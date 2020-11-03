@@ -1,0 +1,7 @@
+const TERMINATEMSG = "Terminating this session..."
+const TOPFIVE = "Top 5: "
+const RESTART = "Restart"
+const START = "Start"
+const TERMINATE = "Terminate"
+const SCORE = "Score: "
+const SUBMIT = "Submit"

@@ -1,3 +1,6 @@
+/**
+ * Grid class that is created on initialization
+ */
 class Grid {
     grid = document.querySelector("#grid")
     frontCardsArr = [] 

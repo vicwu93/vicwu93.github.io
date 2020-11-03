@@ -33,7 +33,7 @@ async function init() {
     rotate()
 }
 
-// local counter to rotate one direction
+// Local counter to rotate one direction
 let counter = 0
 function rotate() {
     counter += 90;
@@ -41,7 +41,7 @@ function rotate() {
 }
 
 function terminate() {
-    if(confirm("Terminating this session..."))
+    if(confirm(TERMINATEMSG))
         location.href=`./summary.html?score=${score}`
     else
         return false
@@ -147,4 +147,11 @@ function before() {
     else 
         return
     numFrontCards--
+}
+
+// Elements I want loaded when users load onto this page
+window.onload = () => {
+    document.getElementById("startBtn").innerHTML = START
+    document.getElementById("terminateBtn").innerHTML = TERMINATE
+    document.getElementById("score").innerHTML = SCORE + 0
 }

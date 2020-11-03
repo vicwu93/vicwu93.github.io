@@ -2,6 +2,11 @@ function restart() {
     location.href = "./index.html"
 }
 
+window.onload = () => {
+    document.getElementById("restart").innerHTML = RESTART
+    document.getElementById("submit").innerHTML = SUBMIT
+} 
+
 function submit() {
     let name = document.getElementById("name").value
     let urlParams = new URLSearchParams(window.location.search)
