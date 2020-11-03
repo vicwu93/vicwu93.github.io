@@ -15,7 +15,7 @@ let cols = 3
 let numFrontCards = 3
 
 let grid = new Grid(rows, cols, numFrontCards)
-let audio = new Audio("./megaman.mp3")
+let audio = new Audio("./audio/megaman.mp3")
 async function init() {
     audio.play()
     grid = new Grid(rows, cols, numFrontCards)
