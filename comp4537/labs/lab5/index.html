@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Add a word and its definition</p>
+    <form action="http://localhost:3000/api/submit" method="POST">
+        <div class="form-group">
+            <label for="word">word</label>
+            <input class="form-control" name="word">
+        </div>
+
+        <div class="form-group">
+            <label for="defn">definition</label>
+            <input class="form-control" name="definition">
+        </div>
+        <button type="submit" class="btn btn-primary">submit</button>
+    </form>
+    <!-- <script src="../../../scripts/labs/lab5/index.js"></script> -->
+</body>
+</html>

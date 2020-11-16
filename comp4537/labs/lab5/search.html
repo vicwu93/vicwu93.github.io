@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <p>Search for a word</p>
+        <div>
+            <div class="row" id="word_defn">
+            </div>
+        </div>
+    </div>
+    
+    <form action="http://localhost:3000/api/search" method="GET">
+        <div class="form-group">
+            <label for="word"></label>
+            <input class="form-control" name="word" >
+        </div>
+
+        <button type="submit" class="btn btn-primary">submit</button>
+    </form>
+    
+
+
+    <script src="../../../scripts/labs/lab5/search.js"></script>
+</body>
+</html>
