@@ -6,25 +6,18 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="container">
-        <p>Search for a word</p>
-        <div>
-            <div class="row" id="word_defn">
-            </div>
-        </div>
-    </div>
-    
-    <form action="http://localhost:3000/api/search" method="GET">
-        <div class="form-group">
-            <label for="word"></label>
-            <input class="form-control" name="word" >
-        </div>
+    <p class="text">Search for a definition!</p>
 
-        <button type="submit" class="btn btn-primary">submit</button>
+    <form id="form" method="post">
+        <input type="text" id="word">
+        <input type="button" value="Submit" onclick="search()"/>
     </form>
-    
+    <div id="defn"></div>
+    <a href="./index.html">
+        <button class="button">Back</button>
+    </a>
 
-
-    <script src="../../../scripts/labs/lab5/search.js"></script>
+    <script src="../../../scripts/labs/lab5/api.js"></script>
+ 
 </body>
 </html>

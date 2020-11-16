@@ -7,18 +7,24 @@
 </head>
 <body>
     <p>Add a word and its definition</p>
-    <form action="http://localhost:3000/api/submit" method="POST">
         <div class="form-group">
             <label for="word">word</label>
-            <input class="form-control" name="word">
+            <input id="word" class="form-control" name="word">
+
         </div>
 
         <div class="form-group">
             <label for="defn">definition</label>
-            <input class="form-control" name="definition">
+            <input id="definition" class="form-control" name="definition">
         </div>
-        <button type="submit" class="btn btn-primary">submit</button>
+        <button type="submit" class="btn btn-primary" onclick="submit()">submit</button>
+    <!-- </form> -->
+    <form action="../lab5/search.html">
+        <input type="submit" value="Search" />
     </form>
-    <!-- <script src="../../../scripts/labs/lab5/index.js"></script> -->
+
+    <div id="resp"></div>
+
+    <script src="../../../scripts/labs/lab5/api.js"></script>
 </body>
 </html>
