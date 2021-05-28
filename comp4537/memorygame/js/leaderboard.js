@@ -33,5 +33,5 @@ function topFive() {
             rank++
             topfive.appendChild(ranks)
         }
-    });
+    })
 }

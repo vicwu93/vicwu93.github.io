@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drinks</title>
+    <script src="../frontend/js/index.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div id="response"></div>
+
+    <!-- get all drinks -->
+    <input id="btn-drinks" type="submit" value="Get all drinks" onclick="drinks()"><br><br>
+
+    <!-- search drink by name -->
+    <input id="input-search-name" type="text" placeholder="Name"><br>
+    <input id="btn-submit-name" type="submit" value="Search by name" onclick="search_name()"><br><br>
+
+    <!-- search drink by id -->
+    <input id="input-search-id" type="text" placeholder="Id"><br>
+    <input id="btn-submit-id" type="submit" value="Search by id" onclick="search_id()"><br><br>
+
+    <!-- search drink by first letter -->
+    <input id="input-search-fletter" type="text" placeholder="first letter"><br>
+    <input id="btn-submit-fletter" type="submit" value="Search by first letter" onclick="search_fletter()"><br><br>
+
+    <!-- search drink by random  -->
+    <input id="btn-submit-random" type="submit" value="Search by random" onclick="search_random()"><br><br>
+
+    <!-- add drink -->
+    Add a drink recipe:<br>
+    Name:<br>
+    <input id="input-add-recipe-name" type="text" placeholder=""><br>
+    Category:<br>
+    <input id="input-add-recipe-category" type="text" placeholder="Hint: beer, ordinary drink, cocktail, shot"><br>
+    Instructions:<br>
+    <input id="input-add-recipe-instructions" type="text" placeholder=""><br>
+    Ingredients:<br>
+    <input id="input-add-recipe-ingredients" type="text" placeholder=""><br>
+    Amount of each ingredient:<br>
+    <input id="input-add-recipe-amounts" type="text" placeholder=""><br>
+    <input id="btn-add" type="submit" value="Add" onclick="add()"><br><br>
+
+    <input id="input-delete-recipe" type="text" placeholder="Delete a drink recipe"><br>
+    <input id="btn-delete" type="submit" value="Delete" onclick="dlt()"><br><br>
+    <!-- end -->
+
+
+    Filters:<br>
+    <input id="input-filter-name" type="text" placeholder="Filter by category"><br>
+    <input id="btn-filter" type="submit" value="Filter" onclick="filter()"><br><br>
+
+    <input id="btn-filter-beer" type="submit" value="beers" onclick="filter_beer()">
+    <input id="btn-filter-ordinary-drink" type="submit" value="ordinary drink" onclick="filter_ordinary_drink()">
+    <input id="btn-filter-shot" type="submit" value="shots" onclick="filter_shot()">
+    <input id="btn-filter-cocktail" type="submit" value="cocktails" onclick="filter_cocktail()"><br><br>
+
+    Change the name of a drink:<br>
+    Old name:
+    <input id="input-old-name" type="text" placeholder="Old name"><br>
+    New name:
+    <input id="input-new-name" type="text" placeholder="New name"><br>
+    <input id="btn-change-name" type="submit" value="Change" onclick="update()">
+
+</body>
+</html>
